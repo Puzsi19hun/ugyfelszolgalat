@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { webSocket, WebSocketSubject } from 'rxjs/webSocket';
+import { HttpClient } from '@angular/common/http';
 
 if(typeof(global) !== 'undefined')
 {
@@ -9,22 +10,22 @@ if(typeof(global) !== 'undefined')
 @Injectable({
   providedIn: 'root'
 })
-export class WebSocketService {
+export class Service {
 
   private socket$: WebSocketSubject<string>;
   
 
-  constructor() {
+  constructor(private httpclient: HttpClient) {
     this.socket$ = webSocket('ws://localhost:8080');
   }
 
   // Valós idejű adatok fogadása
   getData() {
-    return this.socket$.asObservable();
+    return this.httpclient.get('https://puzsisanyi.moriczcloud.hu/api/ugyfelszolgalat/');
   }
 
-  // Kapcsolat lezárása
-  closeConnection() {
-    this.socket$.complete();
-  }
+  // // Kapcsolat lezárása
+  // closeConnection() {
+  //   this.socket$.complete();
+  // }
 }
