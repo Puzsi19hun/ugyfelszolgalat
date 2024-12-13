@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Service } from '../service.service';
-import { HttpClient, HttpClientXsrfModule } from '@angular/common/http';
+import { HttpClient, HttpClientXsrfModule, HttpEventType, HttpHandler, HttpRequest,HttpEvent ,HttpXsrfTokenExtractor, HTTP_INTERCEPTORS, ɵHttpInterceptorHandler } from '@angular/common/http';
 import { Form, FormsModule } from '@angular/forms';
-HttpClientXsrfModule
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-hibabejelento',
@@ -14,9 +15,38 @@ HttpClientXsrfModule
 })
 export class HibabejelentoComponent{
   hiba: any;
-  
+
+  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    // Olvasd ki a CSRF tokent a cookie-ból vagy az alkalmazásban tárolt helyről
+    const csrfToken = this.getCsrfToken();
+
+    // Ha van CSRF token, add hozzá a kéréshez
+    if (csrfToken) {
+      req = req.clone({
+        setHeaders: {
+          'X-XSRF-TOKEN': csrfToken
+        }
+      });
+    }
+
+    return next.handle(req);
+  }
+
+  private getCsrfToken(): string | null {
+    const name = 'XSRF-TOKEN=';
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      let cookie = cookies[i].trim();
+      if (cookie.indexOf(name) === 0) {
+        return cookie.substring(name.length, cookie.length);
+      }
+    }
+    return null;
+  }
 
   constructor(private dataService:Service, private http: HttpClient) { }
+
+  
 
   ngOnInit(){
     this.getUgyfelszolgalatData();
@@ -28,10 +58,8 @@ export class HibabejelentoComponent{
     });
   }
 
-  getList(data: any){
+  postList(data: any){
     console.warn(data.nev)
-    var headers = new Headers();
-    headers.append('Authorization', 'Bearer AADDFFKKKLLLL');
     this.dataService.insertData(data).subscribe((result)=>{
       console.warn(result);
     })

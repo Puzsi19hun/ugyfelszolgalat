@@ -21,7 +21,7 @@ export class Service {
   }
 
   insertData(data:any){
-    return this.httpclient.post('https://puzsisanyi.moriczcloud.hu/api/ugyfelszolgalatfeltolt/',data);
+    return this.httpclient.post('https://puzsisanyi.moriczcloud.hu/api/ugyfelszolgalatfeltolt',data);
   }
 
   // // Kapcsolat lezárása

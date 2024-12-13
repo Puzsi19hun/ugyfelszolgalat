@@ -1,5 +1,5 @@
 <div style="margin-top: 10vh;">
-    <form #post="ngForm" (ngSubmit)="getList(post.value)">
+    <form method="POST" #post="ngForm" (ngSubmit)="postList(post.value)">
         <input ngModel style="margin-right: 8px;" type="text" name="nev" required placeholder="Név">
         <input ngModel type="text" name="varos" required placeholder="Város">
         <textarea ngModel name="hiba" placeholder="Hiba: " required id=""></textarea>
