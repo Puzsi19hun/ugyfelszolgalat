@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 
 export const routes: Routes = [
     
-    {path: '', component: AppComponent},
+    {path: '', component: MainComponent},
     {path: 'kapcsolat', component: KapcsolatComponent},
     {path: 'diagram', component: DiagramComponent},
     {path: 'hibabejelento', component: HibabejelentoComponent},

@@ -1,8 +1,8 @@
 <div style="margin-top: 10vh;">
-    <form action="">
-        <input style="margin-right: 8px;" type="text" name="nev" required placeholder="Név">
-        <input type="text" name="varos" required placeholder="Város">
-        <textarea name="hiba" placeholder="Hiba: " required id=""></textarea>
-        <input type="submit" value="Bejelentés">
+    <form #post="ngForm" (ngSubmit)="getList(post.value)">
+        <input ngModel style="margin-right: 8px;" type="text" name="nev" required placeholder="Név">
+        <input ngModel type="text" name="varos" required placeholder="Város">
+        <textarea ngModel name="hiba" placeholder="Hiba: " required id=""></textarea>
+        <input  type="submit" value="Bejelentés">
     </form>
 </div>

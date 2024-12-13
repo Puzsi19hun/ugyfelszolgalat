@@ -20,6 +20,10 @@ export class Service {
     return this.httpclient.get('https://puzsisanyi.moriczcloud.hu/api/ugyfelszolgalatkiir/');
   }
 
+  insertData(data:any){
+    return this.httpclient.post('https://puzsisanyi.moriczcloud.hu/api/ugyfelszolgalatfeltolt/',data);
+  }
+
   // // Kapcsolat lezárása
   // closeConnection() {
   //   this.socket$.complete();
