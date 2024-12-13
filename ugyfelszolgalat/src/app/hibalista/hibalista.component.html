@@ -1,1 +1,15 @@
-<p>hibalista works!</p>
+<h1>Ez a Hibák oldal :3</h1>
+<a routerLink=""><button>Főoldal</button></a>
+
+<table border="1">
+    <tr>
+        <td>Név: </td>
+        <td>Tartalom</td>
+        <td>Ár</td>
+    </tr>
+        <tr *ngFor="let item of hiba">
+            <td>{{item.nev}}</td>
+            <td>{{item.varos}}</td>
+            <td>{{item.hiba}}</td>
+        </tr>
+</table>

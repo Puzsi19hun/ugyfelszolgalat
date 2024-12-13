@@ -11,18 +11,10 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './hibabejelento.component.html',
   styleUrl: './hibabejelento.component.css'
 })
-export class HibabejelentoComponent implements OnInit{
+export class HibabejelentoComponent{
   hiba: any;
 
   constructor(private dataService:Service) { }
 
-  ngOnInit(){
-    this.getUgyfelszolgalatData();
-  }
-
-  getUgyfelszolgalatData() {
-    this.dataService.getData().subscribe(res =>{
-      this.hiba = res;
-    });
-  }
+  
 }
