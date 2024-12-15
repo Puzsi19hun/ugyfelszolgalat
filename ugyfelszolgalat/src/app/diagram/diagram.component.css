@@ -1,88 +1,16 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    flex-direction: column;
-}
-
-h1 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    margin-top: 0;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-form {
-    background-color: #fff;
-    padding: 30px;
+div {
+    padding: 50px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 800px;
+    max-height: 800px;
+    height: 100%;
+    margin-top: 4rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    box-sizing: border-box;
-}
-
-input[type="submit"] {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-input:focus, textarea:focus {
-    border-color: #007BFF;
-    outline: none;
-}
-
-form > input, form > textarea {
-    margin-bottom: 15px;
-}
+    text-align: justify;
+    flex-direction: column;
+    color: #d0c2e1;
+    background-color: #3a2c54;
+  }
