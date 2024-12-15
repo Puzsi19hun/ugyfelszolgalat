@@ -1,0 +1,12 @@
+<div style="margin-top: 4rem;">
+    <form #myForm="ngForm" (submit)="sendEmail(myForm)">
+        <input [(ngModel)]="nev" type="text" id="name" placeholder="Név:" name="name" required>
+        <br>
+        <input [(ngModel)]="email" type="email" id="email" placeholder="Email: " name="email" required>
+        <br>
+        <textarea [(ngModel)]="uzenet" id="message" placeholder="Üzenet: " name="message" required></textarea>
+        <br>
+
+        <input type="submit" value="Küldés" name="" id="">
+    </form>
+</div>

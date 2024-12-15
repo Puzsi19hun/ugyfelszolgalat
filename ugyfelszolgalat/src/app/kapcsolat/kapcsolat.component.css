@@ -1,45 +1,23 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
-    margin: 0;
-    padding: 0;
+div {
+    padding: 30px;
+    background-color: ;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    text-align: center;
+    text-align: justify;
     flex-direction: column;
-}
+    color: #d0c2e1;
+    background-color: #3a2c54;
+  }
+  
 
-h1 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    margin-top: 0;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-form {
-    background-color: #fff;
+  form {
+    color: #25113d;
+    background-color: #bf9ee5;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -62,27 +40,29 @@ input, textarea {
 }
 
 input[type="submit"] {
-    background-color: #007BFF;
-    color: white;
+    background-color: #380774;
+    color: #decdf2;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #4a0774;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
 
 textarea {
     resize: vertical;
     min-height: 120px;
+    background-color: #d0c2e1;
 }
 
-input:focus, textarea:focus {
-    border-color: #007BFF;
-    outline: none;
+input[type="text"], input[type="email"]
+{
+    background-color: #d0c2e1;
 }
 
-form > input, form > textarea {
-    margin-bottom: 15px;
-}
+
+

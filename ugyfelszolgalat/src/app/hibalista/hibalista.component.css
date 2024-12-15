@@ -9,8 +9,8 @@ table {
 
 tr:nth-child(even) {
     background-color: #dddddd;
-  }
-  
+}
+
 .header th {
   font-weight: bold;
   padding: 10px;

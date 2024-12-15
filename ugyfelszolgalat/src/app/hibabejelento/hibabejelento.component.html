@@ -1,6 +1,6 @@
 
 <section>
-    <div id="form" style="margin-top: 10vh;">
+    <div id="form" style="margin-top: 4rem;">
         <form method="POST" #myForm="ngForm" (submit)="addPost(myForm)">
             <input [(ngModel)]="hiba.nev" required style="margin-right: 8px;" type="text" name="nev" placeholder="Név">
             <input [(ngModel)]="hiba.varos" type="text" name="varos" required placeholder="Város">
