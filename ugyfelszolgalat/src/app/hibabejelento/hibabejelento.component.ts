@@ -16,33 +16,6 @@ import { Observable } from 'rxjs';
 export class HibabejelentoComponent{
   hiba: any;
 
-  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    // Olvasd ki a CSRF tokent a cookie-ból vagy az alkalmazásban tárolt helyről
-    const csrfToken = this.getCsrfToken();
-
-    // Ha van CSRF token, add hozzá a kéréshez
-    if (csrfToken) {
-      req = req.clone({
-        setHeaders: {
-          'X-XSRF-TOKEN': csrfToken
-        }
-      });
-    }
-
-    return next.handle(req);
-  }
-
-  private getCsrfToken(): string | null {
-    const name = 'XSRF-TOKEN=';
-    const cookies = document.cookie.split(';');
-    for (let i = 0; i < cookies.length; i++) {
-      let cookie = cookies[i].trim();
-      if (cookie.indexOf(name) === 0) {
-        return cookie.substring(name.length, cookie.length);
-      }
-    }
-    return null;
-  }
 
   constructor(private dataService:Service, private http: HttpClient) { }
 
