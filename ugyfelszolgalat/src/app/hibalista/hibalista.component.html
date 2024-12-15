@@ -1,12 +1,24 @@
-<table border="1">
-    <tr>
-        <td>Név: </td>
-        <td>Tartalom</td>
-        <td>Ár</td>
-    </tr>
-    <tr *ngFor="let item of hiba">
-        <td>{{item.nev}}</td>
-        <td>{{item.varos}}</td>
-        <td>{{item.hiba}}</td>
-    </tr>
-</table>
+
+<div style="margin-top: 4rem;" class="scrollable">
+    <table class="fixed-header" border="0">
+        <thead class="header">
+            <tr>
+                <th>Név: </th>
+                <th>Tartalom</th>
+                <th>Ár</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of hiba">
+                <td>{{item.nev}}</td>
+                <td>{{item.varos}}</td>
+                <td>{{item.hiba}}</td>
+                <td (click)="torol(item.id)" class="red"><span class="material-symbols-outlined">
+                        close
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

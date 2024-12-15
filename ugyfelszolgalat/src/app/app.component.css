@@ -1,15 +1,16 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
+
+.fo {
+    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 100vh;
     text-align: center;
     flex-direction: column;
+    overflow: hidden;
 }
+
 
 h1 {
     font-size: 2.5rem;
@@ -20,69 +21,22 @@ h1 {
 }
 
 button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
+    font: inherit;
+    font-size: 0.9rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-form {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    box-sizing: border-box;
-}
-
-input[type="submit"] {
-    background-color: #007BFF;
-    color: white;
+    background-color: #380774;
+    color: #decdf2;
+    margin-right: 2rem;
+    border-radius: 4px;
+    padding: 0.5rem 1.5rem;
     border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
 }
 
-input[type="submit"]:hover {
-    background-color: #0056b3;
-}
+ button:hover{
+    background-color: #4a0774;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  }
 
-textarea {
-    resize: vertical;
-    min-height: 120px;
-}
 
-input:focus, textarea:focus {
-    border-color: #007BFF;
-    outline: none;
-}
-
-form > input, form > textarea {
-    margin-bottom: 15px;
-}

@@ -1,16 +1,4 @@
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    flex-direction: column;
-}
 
 h1 {
     font-size: 2.5rem;
@@ -37,8 +25,19 @@ button:hover {
     background-color: #45a049;
 }
 
+#form
+{
+    padding: 1rem;
+    border-radius: 8px;
+    max-height: 60vh;
+    overflow: auto;
+    background-color: #3a2c54;
+    box-shadow: rgba(50, 50, 50, 0.1) 10px -10px;
+}
+
 form {
-    background-color: #fff;
+    color: #25113d;
+    background-color: #bf9ee5;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -61,20 +60,28 @@ input, textarea {
 }
 
 input[type="submit"] {
-    background-color: #007BFF;
-    color: white;
+    background-color: #380774;
+    color: #decdf2;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #4a0774;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
 
 textarea {
     resize: vertical;
     min-height: 120px;
+    background-color: #d0c2e1;
+}
+
+input[type="text"]
+{
+    background-color: #d0c2e1;
 }
 
 input:focus, textarea:focus {

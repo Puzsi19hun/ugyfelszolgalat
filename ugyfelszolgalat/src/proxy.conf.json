@@ -1,6 +1,6 @@
 {
     "/api": {
-        "target": "https://puzsisanyi.moriczcloud.hu/",
+        "target": "https://puzsisanyi.moriczcloud.hu",
         "secure": true,
         "changeOrigin": false,
         "logLevel": "debug"
